@@ -1,0 +1,108 @@
+* Level 00 bandit0
+** ssh -p 2220 bandit0@bandit.labs.overthewire.org
+** cd /home/bandit0
+** cat readme
+* Level 01 ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+** ssh -p 2220 bandit1@bandit.labs.overthewire.org
+** cd /home/bandit1
+** cat < -
+cat will consider - ad STDIN
+*** alternative: cat ./-
+* Level 02 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+** ssh -p 2220 bandit2@bandit.labs.overthewire.org
+** cd /home/bandit2
+** cat spaces\ in\ this\ filename
+use \ to correctly print spaces
+* Level 03 MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+** ssh -p 2220 bandit3@bandit.labs.overthewire.org
+** cd /home/bandit3
+** cd inhere/
+** ls -al
+** cat ...Hiding-From-You
+* Level 04 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+** ssh -p 2220 bandit4@bandit.labs.overthewire.org
+** cd /home/bandit4
+** cd inhere/
+** cat < -file09
+* Level 05 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+** ssh -p 2220 bandit5@bandit.labs.overthewire.org
+** cd /home/bandit5
+** cd inhere/
+** find . -size +1032c -size -1034c
+find a file by size
+** cat maybehere07/.file2
+** extra
+*** find . -type f ! -executable
+find a non executable file
+*** find . -type f | xargs file | grep text
+search file type and print text
+* Level 06 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+** ssh -p 2220 bandit6@bandit.labs.overthewire.org
+** cd /home/bandit6
+** cd /
+** find . -group bandit6 -user bandit7 -size +32c -size -34c 2>&1 | grep -v "Permission denied"
+find a file: with user bandit7 with group bandit6 with size 33 bytes and ignore "Permission denied" output
+2>&1 redirect(>) stderr(2) to stdout(&1)
+** cat ./var/lib/dpkg/info/bandit7.password
+* Level 07 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+** ssh -p 2220 bandit7@bandit.labs.overthewire.org
+** cd /home/bandit7
+** grep millionth data.txt
+* Level 08 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+** ssh -p 2220 bandit8@bandit.labs.overthewire.org
+** cd /home/bandit8
+** sort data.txt | uniq -c | sort
+*** alternativa
+sort data.txt | uniq -c | grep "1 "
+* Level 09 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+** ssh -p 2220 bandit9@bandit.labs.overthewire.org
+** cd /home/bandit9
+** grep -a '==========' data.txt
+* Level 10 FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+** ssh -p 2220 bandit10@bandit.labs.overthewire.org
+** cd /home/bandit10
+** base64 -d data.txt
+* Level 11 dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+** ssh -p 2220 bandit11@bandit.labs.overthewire.org
+** cd /home/bandit11
+** cat data.txt | tr 'a-zA-Z' 'n-za-mN-ZA-M'
+* Level 12 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+** ssh -p 2220 bandit12@bandit.labs.overthewire.org
+** cd /home/bandit12
+** mktemp -d
+/tmp/tmp.2oUZ5FK1yh
+** cd /tmp
+** cd /tmp.2oUZ5FK1yh
+** cp ~/data.txt ./data.txt
+** xxd -r data.txt > d
+** file d
+** mv d1 d.gz
+** gzip -d d
+** file d
+** bzip2 -d d
+** file d.out
+** mv d.out d.gz
+** gzip -d d.gz
+** tar -xf d
+** file data5.bin
+** tar -xf data5.bin
+** file data6.bin
+** bzip -d data6.bin
+** file data6.bin.out
+** tar -xf data6.bin.out
+** file data8.bin
+** mv data8.bin d8.gz
+** gzip -d d8.gz
+** file d8
+** cat d8
+* Level 13 FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+** ssh -p 2220 bandit13@bandit.labs.overthewire.org
+** cd /home/bandit13
+** ssh -i sshkey.private bandit14@localhost -p 2220
+** cd /etc/bandit_pass/bandit14
+* Level 14 MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+** nc localhost 30000
+* Level 15 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+** exit
+** exit
+* Bandit 23-24 /tmp/tmpl ?? gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
